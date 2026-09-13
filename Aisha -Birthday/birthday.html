@@ -1,0 +1,947 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aisha ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+    font-family:"Segoe UI",sans-serif;
+    background:#08000f;
+    color:white;
+}
+
+.page{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100vh;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px;
+    overflow-y:auto;
+}
+
+.page.active{
+    display:flex;
+    animation:pageIn .8s ease;
+}
+
+@keyframes pageIn{
+    from{opacity:0;transform:scale(1.05)}
+    to{opacity:1;transform:scale(1)}
+}
+
+.content{
+    width:100%;
+    max-width:850px;
+    margin:auto;
+}
+
+h1{
+    font-size:clamp(42px,9vw,90px);
+    margin:15px 0;
+}
+
+h2{
+    font-size:clamp(28px,6vw,50px);
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.btn{
+    border:0;
+    padding:16px 30px;
+    border-radius:50px;
+    background:linear-gradient(90deg,#ff238a,#ff70b5);
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 25px #ff238a88;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.07);
+}
+
+
+/* =========================================
+   PAGE 1
+========================================= */
+
+#page1{
+    background:
+    radial-gradient(circle at 50% 20%,#ff3d9a55,transparent 35%),
+    linear-gradient(135deg,#15001e,#42002f,#090014);
+}
+
+
+/* =========================================
+   REALISTIC CSS GIFT
+========================================= */
+
+.gift-container{
+    width:220px;
+    height:230px;
+    position:relative;
+    margin:0 auto 30px;
+    cursor:pointer;
+}
+
+.gift-box{
+    position:absolute;
+    width:180px;
+    height:130px;
+    background:linear-gradient(135deg,#ff2b82,#c90055);
+    left:20px;
+    bottom:15px;
+    border-radius:8px;
+    box-shadow:
+        0 15px 40px #0008,
+        0 0 35px #ff238a88;
+}
+
+/* vertical ribbon */
+
+.gift-box:after{
+    content:"";
+    position:absolute;
+    left:72px;
+    top:0;
+    width:36px;
+    height:100%;
+    background:#ffd34e;
+}
+
+/* lid */
+
+.gift-lid{
+    position:absolute;
+    width:205px;
+    height:38px;
+    background:linear-gradient(135deg,#ff4b99,#d5005f);
+    left:8px;
+    top:55px;
+    border-radius:7px;
+    z-index:5;
+    transition:1.2s cubic-bezier(.2,.8,.2,1);
+    box-shadow:0 8px 15px #0006;
+}
+
+/* lid ribbon */
+
+.gift-lid:after{
+    content:"";
+    position:absolute;
+    left:82px;
+    top:0;
+    width:38px;
+    height:38px;
+    background:#ffd34e;
+}
+
+/* bow */
+
+.bow{
+    position:absolute;
+    top:20px;
+    left:65px;
+    z-index:7;
+    font-size:65px;
+    transition:1.2s;
+}
+
+/* glowing light */
+
+.gift-light{
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:white;
+    border-radius:50%;
+    left:100px;
+    top:110px;
+    opacity:0;
+    box-shadow:
+        0 0 30px white,
+        0 0 70px #ff43a5,
+        0 0 120px #ffd34e;
+    transition:.5s;
+}
+
+
+/* OPEN ANIMATION */
+
+.gift-container.open .gift-lid{
+    transform:
+        translateY(-100px)
+        rotate(-8deg);
+}
+
+.gift-container.open .bow{
+    transform:
+        translateY(-100px)
+        rotate(-15deg);
+}
+
+.gift-container.open .gift-light{
+    opacity:1;
+    transform:scale(8);
+}
+
+
+/* =========================================
+   PAGE 2
+========================================= */
+
+#page2{
+    background:
+    radial-gradient(circle,#70004d,#100018 65%);
+}
+
+.crown{
+    font-size:70px;
+}
+
+.name{
+    color:#ffd6f0;
+    text-shadow:
+        0 0 20px #ff43a5,
+        0 0 50px #ff43a5;
+    animation:nameAppear 2s ease;
+}
+
+@keyframes nameAppear{
+    from{opacity:0;transform:scale(.3)}
+    to{opacity:1;transform:scale(1)}
+}
+
+
+/* =========================================
+   PAGE 3 PHOTOS
+========================================= */
+
+#page3{
+    background:linear-gradient(135deg,#260018,#09000e);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+}
+#page3 .content{
+    width: 100%;
+    max-width:950px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#page3 h2{
+    margin-bottom: 8px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.gallery img{
+    width:100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+
+/* =========================================
+   PAGE 4 LETTER
+========================================= */
+
+#page4{
+    background:
+    radial-gradient(circle at top,#5b003d,#10000f 70%);
+}
+
+.letter{
+    background:#fff3dc;
+    color:#351522;
+    padding:35px;
+    border-radius:12px;
+    max-width:700px;
+    margin:auto;
+    text-align:left;
+    box-shadow:0 15px 50px #000;
+    transform:rotate(-1deg);
+}
+
+.letter h2{
+    color:#b5005e;
+    text-align:center;
+}
+
+.letter p{
+    font-family:Georgia,serif;
+    font-size:17px;
+    line-height:1.8;
+}
+
+
+/* =========================================
+   PAGE 5 WISHES
+========================================= */
+
+#page5{
+    background:
+    radial-gradient(circle,#35004d,#08000f 70%);
+}
+
+.wishes{
+    display:grid;
+    gap:15px;
+    margin:25px auto;
+    max-width:600px;
+}
+
+.wish{
+    background:#ffffff12;
+    border:1px solid #ff70b555;
+    padding:17px;
+    border-radius:15px;
+    font-size:19px;
+}
+
+
+/* =========================================
+   PAGE 6 FINAL
+========================================= */
+
+#page6{
+    background:
+    radial-gradient(circle at center,#580039,#09000e 70%);
+}
+
+.end-heart{
+    font-size:100px;
+    animation:heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.2)}
+}
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+.music{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:100;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    border:2px solid white;
+    background:#ff238a;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 0 20px #ff238a;
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+.confetti{
+    position:fixed;
+    width:8px;
+    height:14px;
+    top:-20px;
+    z-index:200;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+
+/* =========================================
+   HEARTS
+========================================= */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    z-index:2;
+    animation:floatHeart 7s linear forwards;
+}
+
+@keyframes floatHeart{
+    to{
+        transform:translateY(-110vh) rotate(30deg);
+        opacity:0;
+    }
+}
+
+
+/* =========================================
+   FIREWORKS
+========================================= */
+
+.firework{
+    position:fixed;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    z-index:150;
+    animation:explode 1.2s forwards;
+}
+
+@keyframes explode{
+    0%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(25);
+        opacity:0;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:600px){
+    #page3{
+        padding: 15px 10px;
+    }
+    .gallery{
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+        margin: 18px auto;
+    }
+    .gallery img{
+        height: 210px;
+        border-width: 2px;
+        border-radius: 14px;
+    }
+    #page3 .btn{
+        padding: 13px 22px;
+        font-size: 15px;
+    }
+}
+.whatsapp-btn{
+    display:inline-block;
+    margin-top: 15px;
+    padding: 14px 25px;
+    border-radius: 50px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 20px #25D36688;
+    transform: scale(1.07);
+}
+</style>
+</head>
+<body><!-- MUSIC --><audio id="music" loop>
+    <source src="Alex_Warren_-_Ordinary__Official_Video_(128k).m4a" type="audio/mpeg">
+</audio><button class="music" onclick="toggleMusic()">🎵</button>
+
+<!-- ==================================================
+     PAGE 1 — GIFT
+================================================== --><section id="page1" class="page active"><div class="content"><div
+    class="gift-container"
+    id="gift">
+
+    <div class="gift-light"></div>
+
+    <div class="bow">🎀</div>
+
+    <div class="gift-lid"></div>
+
+    <div class="gift-box"></div>
+
+</div>
+
+<h2>
+    A Special Birthday Gift
+</h2>
+
+<p>
+    Someone special prepared something
+    just for you... ❤️
+</p>
+
+<br>
+
+<button
+    class="btn"
+    onclick="openGift()">
+
+    🎁 Open Your Surprise
+
+</button>
+
+</div></section><!-- ==================================================
+     PAGE 2 — NAME REVEAL
+================================================== --><section id="page2" class="page"><div class="content"><div class="crown">👑</div>
+
+<p>
+    Today, we celebrate someone very special...
+</p>
+
+<h1 class="name">
+
+    AISHA BINTU<br>
+    ABDULLAHI
+
+</h1>
+
+<p>
+    ✨ Happy Birthday, Aisha! ✨
+</p>
+
+<br>
+
+<button
+    class="btn"
+    onclick="showPage('page3')">
+
+    📸 See Your Beautiful Pictures
+
+</button>
+
+</div></section><!-- ==================================================
+     PAGE 3 — PHOTOS
+================================================== --><section id="page3" class="page"><div class="content"><h2>📸 Beautiful Memories</h2>
+
+<p>
+    Every picture tells a beautiful story ❤️
+</p>
+
+<div class="gallery">
+
+    <!-- ADD AISHA'S PHOTOS HERE -->
+
+    <img src="Snapchat-1020934198.jpg" alt="Aisha Picture 1">
+
+    <img src="e9e0a07eee224e47b529e94fa4934b3c.jpg" alt="Aisha Picture 2">
+
+    <img src="IMG-20250618-WA0190.jpg" alt="Aisha Picture 3">
+
+    <img src="Snapchat-205887283.jpg" alt="Aisha Picture 4">
+
+    <img src="IMG-20230916-WA0001-1.jpg" alt="Aisha Picture 5">
+
+    <img src="ba0597e7192f627282e6b17f19649a34.jpg" alt="Aisha Picture 6">
+
+</div>
+
+<button
+    class="btn"
+    onclick="showPage('page4')">
+
+    💌 Open My Letter
+
+</button>
+
+</div></section><!-- ==================================================
+     PAGE 4 — LETTER
+================================================== --><section id="page4" class="page"><div class="content"><div class="letter">
+
+    <h2>💌 A Letter For You</h2>
+
+    <br>
+
+    <p>
+
+    My dear Aisha,
+
+    <br><br>
+
+    Today is a beautiful reminder of how
+    special you are.
+
+    I want you to know that I genuinely
+    appreciate the person you are and the
+    moments we have shared.
+
+    <br><br>
+
+    On your birthday, my prayer for you is
+    that Allah blesses you with happiness,
+    peace, success and a life filled with
+    beautiful memories.
+
+    <br><br>
+
+    May Allah guide your steps, protect you
+    wherever you go, answer your sincere
+    prayers and make your future brighter
+    than you imagine.
+
+    <br><br>
+
+    Keep smiling, keep being yourself,
+    and keep chasing the things that
+    make you happy.
+
+    <br><br>
+
+    Happy Birthday, Aisha. ❤️
+
+    <br><br>
+
+    With warm wishes,
+
+    <br>
+
+    <strong>EL-AMINU (MYA) ❤️</strong>
+
+    </p>
+
+</div>
+
+<br><br>
+
+<button
+    class="btn"
+    onclick="showPage('page5')">
+
+    ✨ See Your Birthday Wishes
+
+</button>
+
+</div></section><!-- ==================================================
+     PAGE 5 — WISHES
+================================================== --><section id="page5" class="page"><div class="content"><h2>✨ My Wishes For You</h2>
+
+<p>
+    May this new chapter of your life
+    be beautiful. ❤️
+</p>
+
+<div class="wishes">
+
+    <div class="wish">❤️ More happiness</div>
+
+    <div class="wish">🌟 Greater success</div>
+
+    <div class="wish">🤲 Answered prayers</div>
+
+    <div class="wish">🌹 Beautiful memories</div>
+
+    <div class="wish">✨ Peace and blessings</div>
+
+    <div class="wish">💫 A wonderful new chapter</div>
+
+</div>
+
+<button
+    class="btn"
+    onclick="showPage('page6')">
+
+    🎆 One Last Surprise
+
+</button>
+
+</div></section><!-- ==================================================
+     PAGE 6 — FINAL
+================================================== --><section id="page6" class="page"><div class="content"><div class="end-heart">❤️</div>
+
+<h1>Happy Birthday</h1>
+
+<h2>Aisha Bintu Abdullahi</h2>
+
+<p>
+
+    May your new year be filled with
+    beautiful moments, happiness,
+    peace and countless blessings.
+
+</p>
+
+<br>
+
+<h2>🎂✨❤️</h2>
+
+<p>
+    A special birthday gift from
+    <br>
+    <strong> EL-AMINU (MYA) ❤️</strong>
+</p>
+<br>
+<p> Want to reach me? </p>
+<a href="https://wa.me/2349169389412"
+    target="_blank"
+    class="whatsapp-btn">
+    Chat with me on WhatsApp
+</a>
+
+<br>
+<br>
+<button
+    class="btn"
+    onclick="celebrate()">
+
+    🎆 Celebrate Again!
+
+</button>
+
+</div></section><script>
+
+/* =========================================
+   OPEN THE GIFT
+========================================= */
+
+function openGift(){
+
+    const gift =
+        document.getElementById("gift");
+
+    /* Open the lid */
+
+    gift.classList.add("open");
+
+
+    /* Start music */
+
+    const music =
+        document.getElementById("music");
+
+    music.play().catch(()=>{});
+
+
+    /* Big celebration */
+
+    setTimeout(()=>{
+        createConfetti();
+        fireworks();
+        hearts();
+    },500);
+
+
+    /* Reveal her name after animation */
+
+    setTimeout(()=>{
+
+        showPage("page2");
+
+    },2200);
+
+}
+
+
+/* =========================================
+   SHOW ONLY ONE PAGE
+========================================= */
+
+function showPage(id){
+
+    document
+        .querySelectorAll(".page")
+        .forEach(page=>{
+            page.classList.remove("active");
+        });
+
+    document
+        .getElementById(id)
+        .classList.add("active");
+
+}
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+function toggleMusic(){
+
+    const music =
+        document.getElementById("music");
+
+    if(music.paused){
+
+        music.play();
+
+    }else{
+
+        music.pause();
+
+    }
+
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+function createConfetti(){
+
+    for(let i=0;i<120;i++){
+
+        const piece =
+            document.createElement("div");
+
+        piece.className="confetti";
+
+        piece.style.left =
+            Math.random()*100+"vw";
+
+        piece.style.animationDuration =
+            (2+Math.random()*4)+"s";
+
+        piece.style.background =
+            [
+                "#ff238a",
+                "#ffd166",
+                "#ffffff",
+                "#7df9ff"
+            ][
+                Math.floor(Math.random()*4)
+            ];
+
+        piece.style.transform =
+            "rotate("+
+            Math.random()*360+
+            "deg)";
+
+        document.body.appendChild(piece);
+
+        setTimeout(()=>{
+            piece.remove();
+        },6000);
+
+    }
+
+}
+
+
+/* =========================================
+   FIREWORKS
+========================================= */
+
+function fireworks(){
+
+    for(let i=0;i<18;i++){
+
+        setTimeout(()=>{
+
+            const fire =
+                document.createElement("div");
+
+            fire.className="firework";
+
+            fire.style.left =
+                (10+Math.random()*80)+"vw";
+
+            fire.style.top =
+                (10+Math.random()*60)+"vh";
+
+            fire.style.background =
+                [
+                    "#ff238a",
+                    "#ffd166",
+                    "#7df9ff",
+                    "#ffffff"
+                ][
+                    Math.floor(Math.random()*4)
+                ];
+
+            document.body.appendChild(fire);
+
+            setTimeout(()=>{
+                fire.remove();
+            },1200);
+
+        },i*120);
+
+    }
+
+}
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+function hearts(){
+
+    for(let i=0;i<25;i++){
+
+        const heart =
+            document.createElement("div");
+
+        heart.className="heart";
+
+        heart.innerHTML="❤️";
+
+        heart.style.left =
+            Math.random()*100+"vw";
+
+        heart.style.fontSize =
+            (15+Math.random()*30)+"px";
+
+        heart.style.animationDuration =
+            (4+Math.random()*5)+"s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },9000);
+
+    }
+
+}
+
+
+/* =========================================
+   CELEBRATE AGAIN
+========================================= */
+
+function celebrate(){
+
+    createConfetti();
+    fireworks();
+    hearts();
+
+}
+
+</script></body>
+</html>
